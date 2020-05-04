@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+    <link rel="stylesheet" href="../css/var.css">
+</head>
+<body>
+    <div>
+        <p class="p1">变量的声明</p>
+        <p class="p2">在ES6语法之前，统一使用var关键字来声明一个变量。</p>
+        <div class="code">var name;</div>
+        <p class="p2">在ES6语法及之后，统一使用 const、let关键字来声明一个变量。</p>
+        <div class="code">const b = hello; // ES6 语法<br>
+            let b = world; // ES6 语法</div>
+        <p class="p3">同时声明多个变量时，只需要写一个 var， 多个变量名之间用英文逗号隔开。</p>
+        <p class="p3">JS 的变量数据类型，是在程序运行的过程中，根据等号右边的值来确定的。</p>
+        <p class="p1">数据类型(6)</p>
+        <p class="p2">值类型：参数赋值的时候，传数值。</p>
+        <p class="p3">String 字符串、Number 数值、Boolean 布尔值、Null 空值、Undefined 未定义。</p>
+        <p class="p2">引用类型：参数赋值的时候，传地址（修改的同一片内存空间）。</p>
+        <p class="p3">Object 对象</p>
+        <p class="p3">注意：内置对象 Function、Array、Date、RegExp、Error等都是属于 Object 类型</p>
+        <p class="p21">String 字符串</p>
+        <p class="p3">单引号里可以嵌套双引号；双引号里可以嵌套单引号。</p>
+        <p class="p3">在字符串中我们可以使用\作为转义字符，当表示一些特殊符号时可以使用\进行转义。</p>
+        <pre>
+                \" 表示 "
+                \' 表示 '
+                \\ 表示\
+                \r 表示回车
+                \n 表示换行。n 的意思是 newline
+                \t 表示缩进。t 的意思是 tab
+                \b 表示空格。b 的意思是 blank
+        </pre>
+        <p class="p3">获取字符串的长度:通过字符串的 length 属性</p>
+        <div class="code">
+            <p class="p3">var str1 = '千古壹号';</p>
+            <p class="p3">console.log(str1.length); // 4</p>
+        </div>
+        <p class="p22">字符串拼接</p>
+        <p class="p3">字符串 + 任意数据类型 = 拼接之后的新字符串;</p>
+        <div class="code">
+            <p class="p3">var str1 = '千古壹号' + '永不止步';</p>
+            <p class="p3">var str2 = '千古壹号' + 666;</p>
+        </div>
+        <p class="p21">数值型：Number</p>
+        <p class="p3">在JS中所有的数值都是 Number 类型，包括整数和浮点数（小数）。</p>
+        <p class="p22">数值范围</p>
+        <ul class="ul2">
+            <li>最大值：Number.MAX_VALUE，这个值为： 1.7976931348623157e+308</li>
+            <li>最小值：Number.MIN_VALUE，这个值为： 5e-324</li>
+        </ul>
+        <p class="p3">如果使用 Number 表示的变量超过了最大值，则会返回Infinity。</p>
+        <p class="p22">NaN：是一个特殊的数字，表示Not a Number，非数值。比如：</p>
+        <p class="p3">注意：typeof NaN的返回结果是 number。</p>
+        <p class="p22">浮点数的运算</p>
+        <p class="p3">小数的运算，可能会得到一个不精确的结果。所以，千万不要使用JS进行对精确度要求比较高的运算。</p>
+        <div class="code">
+            <p class="p3"> var a = 0.1 + 0.2;</p>
+            <p class="p3">console.log(a);  //打印结果：0.30000000000000004</p>
+        </div>
+        <p class="p22">键盘上的+可能是连字符，也可能是数字的加号</p>
+        <p class="p3">如果加号两边都是数值，此时是加。否则，就是连字符（用来连接字符串）。</p>
+        <div class="code">
+            <p class="p3">var a = 1;</p>
+            <p class="p3">var b = 2;</p>
+            <p class="p3">console.log("a" + b);	//"a"就不是变量了！所以就是"a"+2 输出a2</p>
+        </div>
+        <p class="p22">隐式转换</p>
+        <p class="p3">- , * , / , %这几个符号会自动进行隐式转换</p>
+        <div class="code">
+            <p class="p3">var a = "4" + 3 - 6;</p>
+            <p class="p3">console.log(a); //37</p>
+        </div>
+        <p class="p21">布尔值：Boolean</p>
+        <p class="p3">布尔值直接使用就可以了，千万不要加上引号。</p>
+        <p class="p21">Null 和 Undefined</p>
+        <p class="p22">null：空值</p>
+        <p class="p3">专门用来表示一个为空的对象（例如：var a = null）</p>
+        <p class="p3">使用 typeof 检查一个null值时，会返回object。</p>
+        <p class="p3">任何值和null运算，null可看做0运算。</p>
+        <p class="p22">undefined：未定义</p>
+        <p class="p3">声明了一个变量，但是没有赋值（例如：var a;），此时它的值就是 undefined。</p>
+        <p class="p3">任何数据类型和undefined运算都是NaN;</p>
+        <p class="p21">引用类型</p>
+        <p class="p22">栈内存和堆内存</p>
+        <p class="p3">基本数据类型的值，直接保存在栈内存中。值与值之间是独立存在，修改一个变量不会影响其他的变量。</p>
+        <p class="p3">对象是保存到堆内存中的。每创建一个新的对象，就会在堆内存中开辟出一个新的空间，而变量保存了对象的内存地址（对象的引用）。如果两个变量保存了同一个对象的引用，当一个通过一个变量修改属性时，另一个也会受到影响。</p>
+    </div>
+    <script src="../js/test.js"></script>
+
+</body>
+</html>
