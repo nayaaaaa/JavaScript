@@ -1,3 +1,6 @@
-var obj = { name: '千古壹号', age: 28 };
-var str6 = '千古壹号' + obj;
-console.log(str6);
+const obj = new Object();
+obj.name = "sun";
+obj.gender = "male";
+obj.job = 19;
+console.log(JSON.stringify(obj));
+

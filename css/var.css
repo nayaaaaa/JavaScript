@@ -130,9 +130,9 @@ div label:active{
     color:red;
 }
 div .t1{
-    width: 400px;
+    width: 250px;
     height: 300px;
-    border: 1px solid blue;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 table .tr1:hover{
